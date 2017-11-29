@@ -12,13 +12,20 @@ public class Strings {
         char[] sourceChars = source.toCharArray();
         char[] searchForChars = searchFor.toCharArray();
 
-        for (int i = sourceChars.length; i > searchFor.length(); i--) {
+        for (int i = sourceChars.length; i >= searchFor.length(); i--) {
+            if (sourceChars[i -1] == searchForChars[searchForChars.length - 1]) {
+                int maybeIndex = i - searchForChars.length;
+                if (arraysContains(sourceChars, maybeIndex, searchForChars)) {
+                    return maybeIndex;
+                }
+            }
 /*
             if (sourceChars[i] != searchForChars[i]) {
                 break; // go to the next character
             }
             // if found - compare sub array
 */
+
 
 
         }
