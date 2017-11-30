@@ -18,7 +18,7 @@ public class Strings {
         for (int i = sourceChars.length; i >= searchFor.length(); i--) {
             if (sourceChars[i - 1] == searchForChars[searchForChars.length - 1]) {
                 int maybeIndex = i - searchForChars.length;
-                if (arraysContains(sourceChars, maybeIndex, searchForChars)) {
+                if (Arrays.arraysContains(sourceChars, maybeIndex, searchForChars)) {
                     return maybeIndex;
                 }
             }
@@ -27,16 +27,4 @@ public class Strings {
         return -1;
     }
 
-    public static boolean arraysContains(char[] src, int srcStartIndex, char[] dst) {
-        return arraysContains(src, srcStartIndex, dst, 0, dst.length);
-    }
-
-    public static boolean arraysContains(char[] src, int startIndex, char[] dst, int dstStartIndex, int length) {
-        for (int i = 0; i < length; i++) {
-            if (src[i + startIndex] != dst[i + dstStartIndex]) {
-                return false;
-            }
-        }
-        return true;
-    }
 }

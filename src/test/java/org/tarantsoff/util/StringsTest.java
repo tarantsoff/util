@@ -39,42 +39,42 @@ public class StringsTest {
     public void compareArraysTestEquals(){
         char[] src = "string".toCharArray();
         char[] dst = "string".toCharArray();
-        Assertions.assertTrue(Strings.arraysContains(src, 0, dst));
+        Assertions.assertTrue(Arrays.arraysContains(src, 0, dst));
     }
 
     @Test
     public void compareArraysTestEqualsLonger(){
         char[] src = "string1".toCharArray();
         char[] dst = "string".toCharArray();
-        Assertions.assertTrue(Strings.arraysContains(src, 0, dst));
+        Assertions.assertTrue(Arrays.arraysContains(src, 0, dst));
     }
 
     @Test
     public void compareArraysTestEqualsLonger1(){
         char[] src = "123string".toCharArray();
         char[] dst = "string".toCharArray();
-        Assertions.assertTrue(Strings.arraysContains(src, 3, dst));
+        Assertions.assertTrue(Arrays.arraysContains(src, 3, dst));
     }
 
     @Test
     public void compareArraysTestEqualsLonger4(){
         char[] src = "1234string".toCharArray();
         char[] dst = "string".toCharArray();
-        Assertions.assertFalse(Strings.arraysContains(src, 3, dst));
+        Assertions.assertFalse(Arrays.arraysContains(src, 3, dst));
     }
 
     @Test
     public void compareArraysTestEqualsLonger5(){
         char[] src = "1234string".toCharArray();
         char[] dst = "string".toCharArray();
-        Assertions.assertTrue(Strings.arraysContains(src, 4, dst, 0, 6));
+        Assertions.assertTrue(Arrays.arraysContains(src, 4, dst, 0, 6));
     }
 
     @Test
     public void compareArraysTestEqualsLonger7(){
         char[] src = "1234str4321".toCharArray();
         char[] dst = "1234555str5".toCharArray();
-        Assertions.assertTrue(Strings.arraysContains(src, 4, dst, 7, 3));
+        Assertions.assertTrue(Arrays.arraysContains(src, 4, dst, 7, 3));
     }
 
 }
