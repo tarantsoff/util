@@ -33,10 +33,6 @@ public class Strings {
 
     public static boolean arraysContains(char[] src, int startIndex, char[] dst, int dstStartIndex, int length) {
         for (int i = 0; i < length; i++) {
-            System.out.println(src[i + startIndex] +
-                    " != " +
-                    dst[i + dstStartIndex] +
-                    " - >" + (src[i + startIndex] != dst[i + dstStartIndex]));
             if (src[i + startIndex] != dst[i + dstStartIndex]) {
                 return false;
             }
