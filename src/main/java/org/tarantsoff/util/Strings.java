@@ -1,7 +1,16 @@
 package org.tarantsoff.util;
 
+/**
+ * Utility class for strings manipulations.
+ */
 public class Strings {
 
+    /**
+     * Searches for last occurrence of a given substring
+     * @param source the string to check
+     * @param searchFor the string we are try to find
+     * @return -1 if no occurrences there or index of last occurrence
+     */
     public static int lastIndexOf(String source, String searchFor) {
 
         if (searchFor.length() == 0) {
