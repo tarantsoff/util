@@ -13,6 +13,7 @@ public class Strings {
      */
     public static int lastIndexOf(String source, String searchFor) {
 
+        // special case. considered to return 0 if search string is empty
         if (searchFor.length() == 0) {
             return 0;
         }
