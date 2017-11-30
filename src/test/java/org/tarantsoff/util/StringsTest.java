@@ -12,6 +12,12 @@ public class StringsTest {
     }
 
     @Test
+    public void testLastIndexOfManyTimes(){
+        int result = Strings.lastIndexOf("123str456str78str0rst4srs", "str");
+        Assertions.assertEquals(14, result);
+    }
+
+    @Test
     public void testLastIndexOfDifferentChar(){
         int result = Strings.lastIndexOf("s", "c");
         Assertions.assertEquals(-1, result);
